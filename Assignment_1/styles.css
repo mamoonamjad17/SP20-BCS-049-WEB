@@ -1,0 +1,17 @@
+body{
+  background-image: url('back.jfif');
+  padding-left: 5%;
+  margin: 2%;
+  color: white;
+  
+}
+
+.heading{
+  color: yellowgreen
+}
+
+.edu{
+  float:right;
+  margin-right: 50%;
+  color: yellowgreen
+}
