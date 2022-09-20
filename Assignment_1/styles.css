@@ -1,17 +1,56 @@
-body{
-  background-image: url('back.jfif');
-  padding-left: 5%;
-  margin: 2%;
+#left-margin {
+  background-color: gray;
+  width: 20%;
+  height: 100vh;
+  float: left;
+}
+#right-margin {
+  background-color: gray;
+  width: 20%;
+  height: 100vh;
+  float: right;
+}
+
+#border {
+  background-color: rgb(60, 60, 128);
+  border-top: 2px solid black;
+}
+
+#desc {
   color: white;
-  
+  float: left;
+  padding: 2.5%;
+  width: 18%;
+}
+#border #desc .color {
+  color: white;
+  font-size: 150%;
+  text-align: center;
+}
+#border #desc .clr-chng {
+  color: red;
+  font-size: 90%;
+}
+#border #desc .size {
+  font-size: 85%;
+}
+#contact {
+  color: white;
+  float: right;
+  padding: 2%;
+  width: 18%;
+  align-items: right;
+ line-height: 150%;
+ padding-right: 3%;
+}
+img {
+  border-radius: 50%;
 }
 
-.heading{
-  color: yellowgreen
-}
+#edu{
+  margin: 5%;
+  float: left;
+  width: 25%;
 
-.edu{
-  float:right;
-  margin-right: 50%;
-  color: yellowgreen
+  background-color: black;
 }
