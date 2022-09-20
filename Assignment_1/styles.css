@@ -14,6 +14,7 @@
 #border {
   background-color: rgb(60, 60, 128);
   border-top: 2px solid black;
+  /* height: 100vh; */
 }
 
 #desc {
@@ -40,17 +41,54 @@
   padding: 2%;
   width: 18%;
   align-items: right;
- line-height: 150%;
- padding-right: 3%;
+  line-height: 150%;
+  padding-right: 3%;
 }
 img {
   border-radius: 50%;
 }
 
-#edu{
-  margin: 5%;
-  float: left;
+#edu {
+  /* float: left; */
+  background-color:rgb(246, 246, 246);
+  padding-left: 23%;
+  font-size: 110%;
   width: 25%;
+}
 
-  background-color: black;
+#edu .small {
+  font-size: 80%;
+  color: red;
+}
+.small_2 {
+  font-size: 80%;
+}
+
+#left {
+  float: left;
+  width: 28%;
+  background-color: yellow;
+  border: 2px solid black;
+}
+
+#left .setting{
+  padding: 10%;
+ font-size: 130%;
+}
+
+#right{
+color: white;
+padding: 1%;
+list-style-type: none;
+}
+
+#right .setting1{
+  padding: 10%;
+  font-size: 110%;
+}
+
+#right .small_3{
+  font-size: smaller;
+  list-style-type: none;
+  
 }
