@@ -1,0 +1,28 @@
+.container_1 {
+  display: flex;
+  flex: 1;
+}
+
+.log {
+  margin-right: auto;
+}
+.menu {
+  padding-top: 1%;
+  font-size: 130%;
+  display: inline-block;
+}
+.list {
+  padding: auto;
+  text-decoration: none;
+  flex-wrap: wrap;
+  color: black;
+}
+.container > .centre {
+  flex: 8;
+  flex-wrap: wrap;
+}
+.size {
+  padding-top: 1%;
+  font-size: 150%;
+  margin-left: auto;
+}
