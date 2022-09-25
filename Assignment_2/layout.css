@@ -81,7 +81,7 @@ button:hover{
 #about{
   background-color: #e6f2ff;
   padding-top: 5%;
-  padding-bottom: 5%;
+  padding-bottom: 7%;
 }
 .centre_2{
   font-size: 200%;
@@ -115,8 +115,8 @@ margin: 1rem;
   width: 350px;
   padding: 25px;
   border: none;
-  background-color: #ffd262;
-  margin: 0;
+  background-color: hsl(43, 100%, 69%);
+  margin-left: 40%;
   
 }
 
