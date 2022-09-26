@@ -177,3 +177,61 @@ button:hover {
 .border {
   border-right: 1px solid white;
 }
+
+.input {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+input[type="text"],
+select {
+  width: 130%;
+  padding: 20px;
+  margin-top: 4%;
+  margin-right: 30%;
+  margin-left: 4%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.input button {
+  margin-bottom: 10%;
+}
+
+.color-font {
+  color: white;
+  font-size: 140%;
+  text-align: center;
+}
+.color-font a {
+  font-size: 110%;
+}
+
+.extends_about .img_3 {
+  width: 21%;
+}
+
+.container_7 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container_7 img {
+  width: 20%;
+  flex: 1;
+}
+
+.mid .menu_1 {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-size: 110%;
+  padding: 0.2rem;
+}
+.mid .menu_1:hover {
+  text-decoration: underline;
+}
+
+.mid .copy {
+  text-align: center;
+  font-size: 110%;
+}
