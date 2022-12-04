@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const productRouter= require('./routes/products');
-const pageRouter=require('./routes/pages');
+const pageRouter=require('./routes/pages ');
 const app = express();
 
 app.use(express.static('public'))
