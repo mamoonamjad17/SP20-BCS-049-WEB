@@ -1,5 +1,5 @@
 const {validating} = require('../models/productModel')
-const { router } = require("../app")
+const {router} = require("../app")
 
 function validationProduct(req,res,next)
 {

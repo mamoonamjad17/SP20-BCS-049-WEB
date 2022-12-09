@@ -1,22 +1,23 @@
 const express = require('express');
 let mongoose = require("mongoose")
 let router =express.Router();
-let model = require("../../models/productModel")
+let productModel = require("../../models/productModel")
 let validate = require("../../middleware/product")
+let auth = require('../../middleware/auth')
 
 //get request from mongo
-router.get("/", async (req,res)=>
+router.get("/", auth,  async (req,res)=>
 {
-    let models = await model.find();
+    const token = req.cookies.token;
+    let models = await productModel.find();
     return res.send(models);
 })
-
 
 //get single data
 router.get("/:id",async(req,res)=>
 {
     try{
-        let model = await model.findById(req.params.id)
+        let model = await productModel.findById(req.params.id)
         return res.send(model);
     }
     catch(err){
@@ -26,10 +27,9 @@ router.get("/:id",async(req,res)=>
 })
 
 //post a record
-router.post("/", validate,async (req,res)=>
+router.post("/",async (req,res)=>
 {
- 
-    let model = new model();
+    let model = new productModel();
     model.name= req.body.name;
     model.price= req.body.price;
     await model.save();
@@ -37,9 +37,9 @@ router.post("/", validate,async (req,res)=>
 })
 
 //updation
-router.put("/:id",validate, async(req,res)=>
+router.put("/:id", async(req,res)=>
 {
-    let model = await model.findById(req.params.id);
+    let model = await productModel.findById(req.params.id);
     model.name=req.body.name;
     model.price=req.body.price;
 
@@ -50,7 +50,7 @@ router.put("/:id",validate, async(req,res)=>
 //deletion
 router.delete("/:id", async(req,res)=>
 {
-    let model = await model.findByIdAndDelete(req.params.id)
+    let model = await productModel.findByIdAndDelete(req.params.id)
     res.send(model);
 })
 module.exports=router;

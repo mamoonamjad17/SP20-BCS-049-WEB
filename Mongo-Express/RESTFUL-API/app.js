@@ -5,9 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose')
 var indexRouter = require('./routes/index');
-let config = require("config")
 let productRouter = require('./routes/API/product')
-let userRouter = require('./routes/API/user')
+let userRouter = require('./routes/API/users')
+let config = require("config")
 var app = express();
 
 // view engine setup
@@ -23,6 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/api/products',productRouter);
 app.use('/api/users',userRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -41,10 +42,7 @@ app.use(function(err, req, res, next) {
 });
 
 mongoose
-  .connect(config.get("db"),{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(config.get("db"))
   .then(()=>{console.log("Conected to Mongo")})
   .catch(()=>{console.log("Error")});
 
