@@ -7,6 +7,8 @@ const expressLayout= require('express-ejs-layouts')
 var productRouter = require('./routes/API/product');
 const userAuth = require('./routes/userAuth')
 const userRouter = require('./routes/user')
+const categoryRouter = require('./routes/API/category')
+const navigation = require('./routes/navigation')
 const mongoose = require('mongoose');
 
 
@@ -23,8 +25,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(expressLayout);
 
 app.use('/api/products', productRouter);
+app.use('/api/category', categoryRouter);
 app.use('/auth', userAuth);
 app.use('/user', userRouter);
+app.use('/', navigation);
+
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

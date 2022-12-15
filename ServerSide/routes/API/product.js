@@ -24,7 +24,6 @@ router.post('/',async(req,res)=>
   product.price=req.body.price;
   product.description=req.body.description;
   //product.category.name=req.body.name;
-
   await product.save();
   res.send(product);
 })
