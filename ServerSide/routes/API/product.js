@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
 const productModel = require('../../models/product');
+const authenctication = require('../../middlewares/authentication');
+
 //to get Products
-router.get('/', async(req, res, next) =>
+router.get('/',authenctication, async(req, res, next) =>
 {
    const products = await productModel.find();
     res.render('showproduct',{products});

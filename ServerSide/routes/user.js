@@ -15,7 +15,7 @@ router.get('/sign-up',(req,res)=>{
 router.post('/login',async(req,res)=>{
   const user = await userModels.findOne({email:req.body.email});
   if(!user){
-    return res.send("Not Registered")
+    return res.redirect('/user/sign-in');
   }
   let hashpassword = await bcrypt.compare(req.body.password,user.password);
   if(!hashpassword){

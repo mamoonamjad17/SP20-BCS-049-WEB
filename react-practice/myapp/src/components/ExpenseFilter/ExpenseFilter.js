@@ -3,7 +3,7 @@ import '../CSS/ExpenseFilter.css'
 
 
 const ExpenseFilter = (props) => {
-const[year,setYear]=useState('2022');
+const[year,setYear]=useState('');
 
 const dateHandler = (event) =>{
     setYear(event.target.value)

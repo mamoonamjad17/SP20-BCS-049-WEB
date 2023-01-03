@@ -44,6 +44,7 @@ const formSubmission = (event) =>{
             </div>
             <div className='btn-div'>
             <button className='submit_btn' onClick={formSubmission}>Add Expense</button>
+            <button className='submit_btn' onClick={props.onCancel}>Cancel</button>
             </div>
 
         </form>
